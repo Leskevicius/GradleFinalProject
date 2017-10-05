@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.jokegen.jokedisplay.JokeDisplayActivity;
-import com.jokelib.JokeProvider;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, JokeProvider.getJoke(), Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, JokeDisplayActivity.class);
-        intent.putExtra(JokeDisplayActivity.JOKE_CONTENT, JokeProvider.getJoke());
-        intent.putExtra(JokeDisplayActivity.JOKE_AUTHOR, "Rokas Leskevicius");
-        intent.putExtra(JokeDisplayActivity.JOKE_DATE, "May 18, 2085");
-        startActivity(intent);
+//        Toast.makeText(this, JokeProvider.getJoke(), Toast.LENGTH_SHORT).show();
+//        Intent intent = new Intent(this, JokeDisplayActivity.class);
+//        intent.putExtra(JokeDisplayActivity.JOKE_CONTENT, JokeProvider.getJoke());
+//        intent.putExtra(JokeDisplayActivity.JOKE_AUTHOR, "Rokas Leskevicius");
+//        intent.putExtra(JokeDisplayActivity.JOKE_DATE, "May 18, 2085");
+//        startActivity(intent);
     }
 
 
