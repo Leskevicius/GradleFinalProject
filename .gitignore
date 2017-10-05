@@ -3,5 +3,6 @@
 /.idea
 .DS_Store
 /build
+/jokebackend/build
 /captures
 gradle.properties

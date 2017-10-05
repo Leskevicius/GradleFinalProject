@@ -4,15 +4,11 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
-
-import android.content.Context;
-import android.os.AsyncTask;
-import android.support.v4.util.Pair;
-import android.util.Log;
-import android.widget.Toast;
-
 import com.jokegen.jokebackend.myApi.MyApi;
-import com.jokegen.jokebackend.myApi.model.MyJoke;
+import com.jokegen.jokebackend.myApi.model.Joke;
+
+import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.IOException;
 
@@ -20,13 +16,13 @@ import java.io.IOException;
  * Created by on 10/4/17.
  */
 
-class JokeEndpointAsyncTask extends AsyncTask<JokeEndpointAsyncTask.JokeListener, Void, MyJoke> {
+class JokeEndpointAsyncTask extends AsyncTask<JokeEndpointAsyncTask.JokeListener, Void, Joke> {
     private final static String TAG = JokeEndpointAsyncTask.class.getCanonicalName();
     private static MyApi myApiService = null;
     private JokeListener listener;
 
     @Override
-    protected MyJoke doInBackground(JokeEndpointAsyncTask.JokeListener... params) {
+    protected Joke doInBackground(JokeEndpointAsyncTask.JokeListener... params) {
         if(myApiService == null) {  // Only do this once
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                 new AndroidJsonFactory(), null)
@@ -56,11 +52,11 @@ class JokeEndpointAsyncTask extends AsyncTask<JokeEndpointAsyncTask.JokeListener
     }
 
     @Override
-    protected void onPostExecute(MyJoke result) {
+    protected void onPostExecute(Joke result) {
         listener.onComplete(result);
     }
 
     public interface JokeListener {
-        void onComplete(MyJoke joke);
+        void onComplete(Joke joke);
     }
 }

@@ -31,7 +31,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile project(path: ':jokebackend', configuration: 'android-endpoints')
-    compile group: 'com.google.api-client', name: 'google-api-client', version: '1.22.0'
-    compile group: 'com.google.api-client', name: 'google-api-client-android', version: '1.22.0'
+    compile group: 'com.google.api-client', name: 'google-api-client', version: '1.23.0'
+    compile group: 'com.google.api-client', name: 'google-api-client-android', version: '1.23.0'
 
 }

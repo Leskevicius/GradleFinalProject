@@ -23,6 +23,13 @@
         android:text="@string/button_text"
 
         />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:scrollbarSize="@dimen/progress_bar_size"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -31,6 +38,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+        ads:adUnitId="@string/banner_ad_unit_id"/>
 
 </RelativeLayout>
