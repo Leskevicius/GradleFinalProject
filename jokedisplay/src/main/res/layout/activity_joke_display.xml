@@ -10,6 +10,7 @@
     <com.jokegen.jokedisplay.cusomviews.JokeView
         android:id="@+id/joke_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:padding="@dimen/joke_display_padding"/>
 
 </LinearLayout>
